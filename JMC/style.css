@@ -1,3 +1,41 @@
-.main {
-    background-color: red;
+body {
+    background-color: gray;
+}
+
+.logo {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.game {
+    margin-top: 50px;
+    color: blue;
+    text-align: center;
+    font-size: 24px;
+}
+
+.start {
+    margin-top: 50px;
+    background-color: #fedc00ff;
+    color: black;
+    width: 250px;
+    height: 100px;
+    border-radius: 20px;
+    font-size: 32px;
+}
+
+.pink {
+    color: #d6007cff;
+}
+
+.blue {
+    color: #009bdbff;
+}
+
+.green {
+    color: #90b301ff;
+}
+
+.yellow {
+    color: #fedc00ff;
 }
