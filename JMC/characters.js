@@ -1,7 +1,7 @@
 let balance = -1;
 let salary = -1;
-let job = "";
-let name = "";
+let job = "TODO";
+let name = "TODO";
 
 //TODO
 if (this.name === "TODO"){
@@ -18,5 +18,5 @@ if (this.name === "TODO"){
     balance = -1;
 }
 else {
-    console.log("PROGRAMMING ERROR!!!!");
+    console.log("PROGRAMMING ERROR!!!");
 }
