@@ -1,9 +1,10 @@
 class Character {
-    constructor(balance, salary, job, name) {
+    constructor(balance, salary, job, firstName, lastName) {
         this.balance = balance;
         this.salary = salary;
         this.job = job;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     setBalance(bal) {
@@ -30,7 +31,19 @@ class Character {
         return this.job;
     }
     
-    setName(fullName) {
-        return this.name;
+    setFirstName(name) {
+        return this.firstName;
+    }
+
+    getFirstName() {
+        return this.firstName;
+    }
+
+    setLastName(surname) {
+        return this.lastName;
+    }
+
+    getLastName() {
+        return this.lastName;
     }
 }
