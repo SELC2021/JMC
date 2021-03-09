@@ -1,5 +1,7 @@
 body {
-    background-color: gray;
+    margin: 1%;
+    padding: 0;
+    background: lightgrey;
 }
 
 .logo {
