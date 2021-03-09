@@ -1,3 +1,9 @@
+let c1;
+
+function setCharacter(bal, pay, position, name, surname) {
+    c1 = new Character(bal, pay, position, name, surname);
+}
+
 class Character {
     constructor(balance, salary, job, firstName, lastName) {
         this.balance = balance;
