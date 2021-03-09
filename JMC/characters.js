@@ -1,22 +1,36 @@
-let balance = -1;
-let salary = -1;
-let job = "TODO";
-let name = "TODO";
+class Character {
+    constructor(balance, salary, job, name) {
+        this.balance = balance;
+        this.salary = salary;
+        this.job = job;
+        this.name = name;
+    }
 
-//TODO
-if (this.name === "TODO"){
-    job = "TODO";
-    salary = -1;
-    balance = -1;
-} else if (this.name === "TODO"){
-    job = "TODO";
-    salary = -1;
-    balance = -1;
-} else if (this.name === "TODO"){
-    job = "TODO";
-    salary = -1;
-    balance = -1;
-}
-else {
-    console.log("PROGRAMMING ERROR!!!");
+    setBalance(bal) {
+        this.balance = bal;
+    }
+
+    getBalance() {
+        return this.balance;
+    }
+    
+    setSalary(pay) {
+        this.salary = pay;
+    }
+
+    getSalary() {
+        return this.salary;
+    }
+    
+    setJob(position) {
+        this.job = position;
+    }
+
+    getJob() {
+        return this.job;
+    }
+    
+    setName(fullName) {
+        return this.name;
+    }
 }
