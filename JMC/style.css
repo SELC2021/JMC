@@ -27,6 +27,7 @@ body {
     height: 500%;
     border-radius: 25px;
     font-size: 32px;
+    cursor: pointer;
 }
 
 .pink {

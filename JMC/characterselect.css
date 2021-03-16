@@ -69,7 +69,8 @@ body {
     align-self: center;
     width: 27%;
     border-radius: 10%;
-    margin: 2%
+    margin: 2%;
+    cursor: pointer;
 }
 
 
