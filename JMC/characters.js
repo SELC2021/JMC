@@ -2,6 +2,7 @@ let c1;
 
 function setCharacter(bal, pay, position, name, surname) {
     c1 = new Character(bal, pay, position, name, surname);
+    //console.log(c1);
 }
 
 class Character {
