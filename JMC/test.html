@@ -2,7 +2,6 @@
 <html lang="en">
 <link rel="stylesheet" href="characterselect.css">
 <head>
-    <title>Character Name</title>
     <script type="text/javascript" src="characters.js"></script>
 </head>
 <body>
@@ -12,12 +11,16 @@
     setCharacter(12000, 7000, 'Doctor', 'Sarah', 'Doeler');
     let name = document.getElementById("firstName");
     name.innerHTML = c1.getFirstName();
+
     let surname = document.getElementById("lastName");
     surname.innerHTML = c1.getLastName();
+
     let job = document.getElementById("job");
     job.innerHTML = c1.getJob();
+
     let sal = document.getElementById("salary");
     sal.innerHTML = c1.getSalary();
+
     let bal = document.getElementById("balance");
     bal.innerHTML = c1.getBalance();
     </script>
