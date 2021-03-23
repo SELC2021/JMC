@@ -1,13 +1,13 @@
-
-body {
-    margin: 1%;
-    padding: 0;
+html {
     background: lightgrey;
     border: red;
     border-style: dotted;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+
+    height: 100vh;
 
 }
 
@@ -75,6 +75,7 @@ body {
     color: white;
     border-radius: 10%;
     align-self: center;
+    cursor: pointer;
 }
 
 
