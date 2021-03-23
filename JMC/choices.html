@@ -17,11 +17,12 @@
     <p id="name">NAME</p>
     <script>
         
-        //setCharacter(120, 12, 'Doc', 'Je', 'D')
-        console.log(c1);
-        document.getElementById("name").innerHTML = c1.getFirstName();
-
-        
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("#test1").text("Hello world!");
+            });
+        });
+      
     </script>
     <p>Current Balance: $$$</p>
     <p>Current Job: $$$$</p>
