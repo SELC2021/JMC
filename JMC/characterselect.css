@@ -3,6 +3,12 @@ body {
     margin: 1%;
     padding: 0;
     background: lightgrey;
+    border: red;
+    border-style: dotted;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
 }
 
 .header {
@@ -24,6 +30,8 @@ body {
     justify-content: space-evenly;
     align-items: stretch;
     margin: 2%;
+    border-color: aqua;
+    border-style: dotted;
 }
 
 .fullBotton {
