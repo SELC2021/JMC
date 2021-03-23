@@ -51,28 +51,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
     margin: 1%;
     padding: 1%;
 }
 
 .img {
-    align-self: center;
     height: 70%;
     width: 40%;
     margin: 1% 1% 5%;
+    align-self: center;
 }
 
 .button {
     background-color: purple;
     color: white;
-    text-align: center;
-    margin: 2%;
-    align-self: center;
-    width: 27%;
     border-radius: 10%;
-    margin: 2%;
-    cursor: pointer;
+    align-self: center;
 }
 
 
