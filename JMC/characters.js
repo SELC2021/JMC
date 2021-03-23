@@ -1,7 +1,4 @@
-let c1;
-
 function setCharacter(bal, pay, position, name, surname) {
-    c1 = new Character(bal, pay, position, name, surname);
     let balance = bal;
     let salary = pay;
     let job = position;
@@ -24,14 +21,4 @@ function addSalary(amount) {
 
 function setJob(title) {
     sessionStorage.setItem("job", title);
-}
-
-class Character {
-    constructor(balance, salary, job, firstName, lastName) {
-        this.balance = balance;
-        this.salary = salary;
-        this.job = job;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 }
