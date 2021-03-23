@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="characterselect.css">
+<head>
+    <script type="text/javascript" src="characters.js"></script>
+</head>
+<body>
+    <p style="display:inline">Hello my name is <p id="firstName" style="display:inline">FIRSTNAME</p> <p id="lastName" style="display:inline">LASTNAME</p> and my job title is a <p id="job" style="display:inline">JOB</p> making $<p id="salary" style="display:inline">SALARY</p> a year with $<p id="balance" style="display:inline">BALANCE</p> in the bank.</p>
+
+    <script>
+    setCharacter(12000, 7000, 'Doctor', 'Sarah', 'Doeler');
+    let name = document.getElementById("firstName");
+    name.innerHTML = c1.getFirstName();
+
+    let surname = document.getElementById("lastName");
+    surname.innerHTML = c1.getLastName();
+
+    let job = document.getElementById("job");
+    job.innerHTML = c1.getJob();
+
+    let sal = document.getElementById("salary");
+    sal.innerHTML = c1.getSalary();
+
+    let bal = document.getElementById("balance");
+    bal.innerHTML = c1.getBalance();
+    </script>
+
+</body>
+</html>
