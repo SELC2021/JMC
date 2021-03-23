@@ -14,12 +14,12 @@ function setCharacter(bal, pay, position, name, surname) {
     sessionStorage.setItem("lastname", lastname);
 }
 
-function setBalance(amount) {
-    sessionStorage.setItem("balance", amount);
+function addBalance(amount) {
+    sessionStorage.setItem("balance", parseInt(sessionStorage.getItem("balance"), 10) + amount);
 }
 
-function setSalary(amount) {
-    sessionStorage.setItem("salary", amount);
+function addSalary(amount) {
+    sessionStorage.setItem("salary", parseInt(sessionStorage.getItem("salary"), 10) + amount);
 }
 
 function setJob(title) {
