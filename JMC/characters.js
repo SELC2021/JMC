@@ -2,8 +2,16 @@ let c1;
 
 function setCharacter(bal, pay, position, name, surname) {
     c1 = new Character(bal, pay, position, name, surname);
-    //console.log(c1);
-    sessionStorage.setItem("character", "c1");
+    let balance = bal;
+    let salary = pay;
+    let job = position;
+    let firstname = name;
+    let lastname = surname;
+    sessionStorage.setItem("balance", balance);
+    sessionStorage.setItem("salary", salary);
+    sessionStorage.setItem("job", job);
+    sessionStorage.setItem("firstname", firstname);
+    sessionStorage.setItem("lastname", lastname);
 }
 
 class Character {

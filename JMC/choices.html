@@ -13,19 +13,34 @@
 </div>
 
 <div class="chinfo">
-    <p>Current Status</p>
-    <p id="name">NAME</p>
+    <p style="display:inline">Current Player: <p style="display:inline" id="name">NAME</p> <p style="display:inline" id="surname">SURNAME</p></p>
+    <p style="display:inline">Current Balance: $<p style="display:inline" id="bal">BAL</p></p>
+    <p style="display:inline">Current Job: <p style="display:inline" id="position">POSITION</p></p>
+    <p style="display:inline">Current Salary: $<p style="display:inline" id="sal">SAL</p></p>
     <script>
-        
-        //setCharacter(120, 12, 'Doc', 'Je', 'D')
-        console.log(c1);
-        document.getElementById("name").innerHTML = c1.getFirstName();
 
+        let firstname = sessionStorage.getItem("firstname");
+        let name = document.getElementById("name");
+        name.innerHTML = firstname;
+
+        let balance = sessionStorage.getItem("balance");
+        let bal = document.getElementById("bal");
+        bal.innerHTML = balance;
+
+        let salary = sessionStorage.getItem("salary");
+        let sal = document.getElementById("sal");
+        sal.innerHTML = salary;
+
+        let job = sessionStorage.getItem("job");
+        let position = document.getElementById("position");
+        position.innerHTML = job;
+
+
+        let lastname = sessionStorage.getItem("lastname");
+        let surname = document.getElementById("surname");
+        surname.innerHTML = lastname;
         
     </script>
-    <p>Current Balance: $$$</p>
-    <p>Current Job: $$$$</p>
-    <p>Current Salary: $$$</p>
 </div>
 
 <div class="selection">
