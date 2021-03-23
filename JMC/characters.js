@@ -14,6 +14,18 @@ function setCharacter(bal, pay, position, name, surname) {
     sessionStorage.setItem("lastname", lastname);
 }
 
+function setBalance(amount) {
+    sessionStorage.setItem("balance", amount);
+}
+
+function setSalary(amount) {
+    sessionStorage.setItem("salary", amount);
+}
+
+function setJob(title) {
+    sessionStorage.setItem("job", title);
+}
+
 class Character {
     constructor(balance, salary, job, firstName, lastName) {
         this.balance = balance;
@@ -21,45 +33,5 @@ class Character {
         this.job = job;
         this.firstName = firstName;
         this.lastName = lastName;
-    }
-
-    setBalance(bal) {
-        this.balance = bal;
-    }
-
-    getBalance() {
-        return this.balance;
-    }
-    
-    setSalary(pay) {
-        this.salary = pay;
-    }
-
-    getSalary() {
-        return this.salary;
-    }
-    
-    setJob(position) {
-        this.job = position;
-    }
-
-    getJob() {
-        return this.job;
-    }
-    
-    setFirstName(name) {
-        return this.firstName;
-    }
-
-    getFirstName() {
-        return this.firstName;
-    }
-
-    setLastName(surname) {
-        return this.lastName;
-    }
-
-    getLastName() {
-        return this.lastName;
     }
 }
