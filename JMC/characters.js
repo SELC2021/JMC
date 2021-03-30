@@ -51,22 +51,29 @@ function choice(option) {
     switch(choice) {
         case 1:
             if (option == 1) {
-
+                // call to function
+                document.getElementById("choice1").textContent = "REPLACEMENT TEXTo1c1";
+                setEverything();
             }
-            if (option ==2) {
-                addBalance(50000);
+            if (option == 2) {
+                // call to function
+                document.getElementById("choice2").textContent = "REPLACEMENT TEXTo1c1";
                 setEverything();
             }
             sessionStorage.setItem("choiceNum", "2");
             break;
         case 2:
             if (option == 1) {
-
+                // call to function
+                document.getElementById("choice1").textContent = "REPLACEMENT TEXTo1c2";
+                setEverything();
             }
             if (option == 2) {
-                
+                // call to function
+                document.getElementById("choice2").textContent = "REPLACEMENT TEXTo2c2";
+                setEverything();
             }
-            sessionStorage.setItem("choiceNum", "3");
+            sessionStorage.setItem("choiceNum", "2");
             break;
         }
 }
