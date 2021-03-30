@@ -25,7 +25,7 @@ function setJob(title) {
 }
 
 function setEverything() {
-    let firstname = sessionStorage.getItem("firstname");
+        let firstname = sessionStorage.getItem("firstname");
         let name = document.getElementById("name");
         name.innerHTML = firstname;
 
@@ -52,12 +52,12 @@ function choice(option) {
         case 1:
             if (option == 1) {
                 // call to function
-                document.getElementById("choice1").textContent = "REPLACEMENT TEXTo1c1";
+                document.getElementById("choice1").textContent = "REPLACEMENT TEXT o1c1";
                 setEverything();
             }
             if (option == 2) {
                 // call to function
-                document.getElementById("choice2").textContent = "REPLACEMENT TEXTo1c1";
+                document.getElementById("choice2").textContent = "REPLACEMENT TEXT o1c1";
                 setEverything();
             }
             sessionStorage.setItem("choiceNum", "2");
@@ -65,12 +65,12 @@ function choice(option) {
         case 2:
             if (option == 1) {
                 // call to function
-                document.getElementById("choice1").textContent = "REPLACEMENT TEXTo1c2";
+                document.getElementById("choice1").textContent = "REPLACEMENT TEXT o1c2";
                 setEverything();
             }
             if (option == 2) {
                 // call to function
-                document.getElementById("choice2").textContent = "REPLACEMENT TEXTo2c2";
+                document.getElementById("choice2").textContent = "REPLACEMENT TEXT o2c2";
                 setEverything();
             }
             sessionStorage.setItem("choiceNum", "2");
