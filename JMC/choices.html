@@ -19,25 +19,7 @@
     <p style="display:inline">Current Salary: $<p style="display:inline" id="sal">SAL</p></p>
     <script>
 
-        let firstname = sessionStorage.getItem("firstname");
-        let name = document.getElementById("name");
-        name.innerHTML = firstname;
-
-        let balance = sessionStorage.getItem("balance");
-        let bal = document.getElementById("bal");
-        bal.innerHTML = balance;
-
-        let salary = sessionStorage.getItem("salary");
-        let sal = document.getElementById("sal");
-        sal.innerHTML = salary;
-
-        let job = sessionStorage.getItem("job");
-        let position = document.getElementById("position");
-        position.innerHTML = job;
-
-        let lastname = sessionStorage.getItem("lastname");
-        let surname = document.getElementById("surname");
-        surname.innerHTML = lastname;
+        setEverything();
         
     </script>
 </div>
@@ -67,7 +49,7 @@
             <div class="img">
                 <img src="https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/family-of-four-7101-a234e9249b2c7223d4e4d8cd9432f9e9@1x.jpg" style="width: 100%; height: 100%;">    
             </div>
-            <button class="button button1">Play Me!</button>
+            <button onclick="choice(2);" class="button button1">Play Me!</button>
         </div>
     </div>
 </div>

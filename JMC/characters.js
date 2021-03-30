@@ -9,6 +9,7 @@ function setCharacter(bal, pay, position, name, surname) {
     sessionStorage.setItem("job", job);
     sessionStorage.setItem("firstname", firstname);
     sessionStorage.setItem("lastname", lastname);
+    sessionStorage.setItem("choiceNum", "1");
 }
 
 function addBalance(amount) {
@@ -21,4 +22,51 @@ function addSalary(amount) {
 
 function setJob(title) {
     sessionStorage.setItem("job", title);
+}
+
+function setEverything() {
+    let firstname = sessionStorage.getItem("firstname");
+        let name = document.getElementById("name");
+        name.innerHTML = firstname;
+
+        let balance = sessionStorage.getItem("balance");
+        let bal = document.getElementById("bal");
+        bal.innerHTML = balance;
+
+        let salary = sessionStorage.getItem("salary");
+        let sal = document.getElementById("sal");
+        sal.innerHTML = salary;
+
+        let job = sessionStorage.getItem("job");
+        let position = document.getElementById("position");
+        position.innerHTML = job;
+
+        let lastname = sessionStorage.getItem("lastname");
+        let surname = document.getElementById("surname");
+        surname.innerHTML = lastname;
+}
+
+function choice(option) {
+    let choice = parseInt(sessionStorage.getItem("choiceNum"), 10)
+    switch(choice) {
+        case 1:
+            if (option == 1) {
+
+            }
+            if (option ==2) {
+                addBalance(50000);
+                setEverything();
+            }
+            sessionStorage.setItem("choiceNum", "2");
+            break;
+        case 2:
+            if (option == 1) {
+
+            }
+            if (option == 2) {
+                
+            }
+            sessionStorage.setItem("choiceNum", "3");
+            break;
+        }
 }
