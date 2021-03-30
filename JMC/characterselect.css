@@ -1,7 +1,5 @@
 html {
     background: lightgrey;
-    border: red;
-    border-style: dotted;
 
     display: flex;
     flex-direction: column;
@@ -30,9 +28,8 @@ html {
     justify-content: space-evenly;
     align-items: stretch;
     margin: 2%;
-    border-color: aqua;
-    border-style: dotted;
 }
+
 
 .fullBotton {
     background-color: #f1f1f1;
