@@ -10,6 +10,9 @@ function setCharacter(bal, pay, position, name, surname) {
     sessionStorage.setItem("firstname", firstname);
     sessionStorage.setItem("lastname", lastname);
     sessionStorage.setItem("choiceNum", "1");
+    sessionStorage.setItem("car", "null");
+    sessionStorage.setItem("relationship", "single");
+    sessionStorage.setItem("kids", "0")
 }
 
 function addBalance(amount) {
@@ -22,6 +25,18 @@ function addSalary(amount) {
 
 function setJob(title) {
     sessionStorage.setItem("job", title);
+}
+
+function setCar(color) {
+    sessionStorage.setItem("car", color);
+}
+
+function setRelationship(status) {
+    sessionStorage.setItem("relationship", status);
+}
+
+function addKids(amount) {
+    sessionStorage.setItem("kids", parseInt(sessionStorage.getItem("kids"), 10) + amount);
 }
 
 function setEverything() {
@@ -47,7 +62,7 @@ function setEverything() {
 }
 
 function choice(option) {
-    let choice = parseInt(sessionStorage.getItem("choiceNum"), 10)
+    let choice = parseInt(sessionStorage.getItem("choiceNum"), 10);
     switch(choice) {
         case 1:
             if (option == 1) {
@@ -55,19 +70,28 @@ function choice(option) {
             }
             if (option == 2) {
             }
-            document.getElementById("choice1").textContent = "Buy a Red Car";
-            document.getElementById("choice2").textContent = "Buy a Blue Car";
+            document.getElementById("choice1").textContent = "Buy a Blue Car for $2,000";
+            document.getElementById("choice2").textContent = "Buy a Red Car for $2,500";
             setEverything();
             sessionStorage.setItem("choiceNum", "2");
             break;
         case 2:
             if (option == 1) { 
-                addBalance(-2000);          
+                addBalance(-2000);
+                setCar("Blue");     
             }
             if (option == 2) {
                 addBalance(-2500);
+                setCar("Red");
             }
-            // NEED TO ADD PAYDAY
+            // ADD PAYDAY MESSAGE
+            let newSal = parseInt(sessionStorage.getItem("salary"), 10);
+            if (newSal == 7000) {
+                addBalance(7000);
+            }
+            if (newSal == 8000) {
+                addBalance(8000);
+            }
             document.getElementById("choice1").textContent = "Get Married";
             document.getElementById("choice2").textContent = "Hold Off for Longer";
             setEverything();
@@ -76,11 +100,22 @@ function choice(option) {
         case 3:
             if (option == 1) {
                 addBalance(-3000);
+                setRelationship("married");
+                // ADD BUY HOUSING MESSAGE
+                addBalance(-2000);
             }
             if (option == 2) {
+                // ADD BUY HOUSING MESSAGE
+                addBalance(-3000);
             }
-            // NEED TO ADD FLAT TIRE
-            // NEED TO ADD BUY HOUSING
+            // ADD FLAT TIRE MESSAGE
+            let carColor = sessionStorage.getItem("car")
+            if (carColor == "Blue") {
+                addBalance(-750);
+            }
+            if (carColor == "Red") {
+                addBalance(-500);
+            }
             document.getElementById("choice1").textContent = "Have One Kid";
             document.getElementById("choice2").textContent = "Have Two Kids";
             setEverything();
@@ -89,13 +124,36 @@ function choice(option) {
         case 4:
             if (option == 1) {
                 addBalance(-2000);
+                addKids(1);
             }
             if (option == 2) {
                 addBalance(-3000);
+                addKids(2);
             }
-            // NEED TO ADD GRANDPA PASSING AWAY
-            // NEED TO ADD PAYDAY
-            // NEED TO ADD BIRTHDAY FOR KID(S)
+            // ADD GRANDPA PASSING AWAY MESSAGE
+            let status = sessionStorage.getItem("relationship")
+            if (status == "married") {
+                addBalance(-3000);
+            }
+            if (status == "single") {
+                addBalance(2000);
+            }
+            // ADD PAYDAY MESSAGE
+            let newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
+            if (newSal2 == 7000) {
+                addBalance(7000);
+            }
+            if (newSal2 == 8000) {
+                addBalance(8000);
+            }
+            // ADD BIRTHDAY FOR KID(S) MESSAGE
+            let numKids = parseInt(sessionStorage.getItem("kids"), 10);
+            if (numKids == 1) {
+                addBalance(3000);
+            }
+            if (numKids == 2) {
+                addBalance(6000);
+            }
             document.getElementById("choice1").textContent = "Change to a Random New Job";
             document.getElementById("choice2").textContent = "Stay At Your Current Job";
             setEverything();
@@ -103,11 +161,11 @@ function choice(option) {
             break;
         case 5:
             if (option == 1) {
-                // NEED TO ADD RANDOM JOB SELECTION
+                // ADD RANDOM JOB SELECTION
             }
             if (option == 2) {
             }
-            // NEED TO CHANGE FOR RETIRING
+            // CHANGE TEXT FOR RETIRING
             document.getElementById("choice1").textContent = "REPLACEMENT TEXT o1c5";
             document.getElementById("choice2").textContent = "REPLACEMENT TEXT o2c5";
             setEverything();
