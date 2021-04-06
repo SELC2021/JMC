@@ -51,29 +51,66 @@ function choice(option) {
     switch(choice) {
         case 1:
             if (option == 1) {
-                // call to function
-                document.getElementById("choice1").textContent = "REPLACEMENT TEXT o1c1";
-                setEverything();
+                addSalary(1000);                
             }
             if (option == 2) {
-                // call to function
-                document.getElementById("choice2").textContent = "REPLACEMENT TEXT o1c1";
-                setEverything();
             }
+            document.getElementById("choice1").textContent = "Buy a Red Car";
+            document.getElementById("choice2").textContent = "Buy a Blue Car";
+            setEverything();
             sessionStorage.setItem("choiceNum", "2");
             break;
         case 2:
-            if (option == 1) {
-                // call to function
-                document.getElementById("choice1").textContent = "REPLACEMENT TEXT o1c2";
-                setEverything();
+            if (option == 1) { 
+                addBalance(-2000);          
             }
             if (option == 2) {
-                // call to function
-                document.getElementById("choice2").textContent = "REPLACEMENT TEXT o2c2";
-                setEverything();
+                addBalance(-2500);
             }
-            sessionStorage.setItem("choiceNum", "2");
+            // NEED TO ADD PAYDAY
+            document.getElementById("choice1").textContent = "Get Married";
+            document.getElementById("choice2").textContent = "Hold Off for Longer";
+            setEverything();
+            sessionStorage.setItem("choiceNum", "3");
+            break;
+        case 3:
+            if (option == 1) {
+                addBalance(-3000);
+            }
+            if (option == 2) {
+            }
+            // NEED TO ADD FLAT TIRE
+            // NEED TO ADD BUY HOUSING
+            document.getElementById("choice1").textContent = "Have One Kid";
+            document.getElementById("choice2").textContent = "Have Two Kids";
+            setEverything();
+            sessionStorage.setItem("choiceNum", "4");
+            break;
+        case 4:
+            if (option == 1) {
+                addBalance(-2000);
+            }
+            if (option == 2) {
+                addBalance(-3000);
+            }
+            // NEED TO ADD GRANDPA PASSING AWAY
+            // NEED TO ADD PAYDAY
+            // NEED TO ADD BIRTHDAY FOR KID(S)
+            document.getElementById("choice1").textContent = "Change to a Random New Job";
+            document.getElementById("choice2").textContent = "Stay At Your Current Job";
+            setEverything();
+            sessionStorage.setItem("choiceNum", "5");
+            break;
+        case 5:
+            if (option == 1) {
+                // NEED TO ADD RANDOM JOB SELECTION
+            }
+            if (option == 2) {
+            }
+            // NEED TO CHANGE FOR RETIRING
+            document.getElementById("choice1").textContent = "REPLACEMENT TEXT o1c5";
+            document.getElementById("choice2").textContent = "REPLACEMENT TEXT o2c5";
+            setEverything();
             break;
         }
 }

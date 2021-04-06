@@ -16,6 +16,37 @@ body {
     background-color: #f1f1f1;
     padding: 0.5%;
     margin: 1%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.player {
+    border-style: dotted;
+    border-color: red;
+    padding: 0% 0.5% 0.5% 0.5%;
+    text-align: center;
+}
+
+.balance {
+    border-style: dotted;
+    border-color: orange;
+    padding: 0% 0.5% 0.5% 0.5%;
+    text-align: center;
+}
+
+.position {
+    border-style: dotted;
+    border-color: blue;
+    padding: 0% 0.5% 0.5% 0.5%;
+    text-align: center;
+}
+
+.salary {
+    border-style: dotted;
+    border-color: purple;
+    padding: 0% 0.5% 0.5% 0.5%;
+    text-align: center;
 }
 
 .selection {
@@ -23,12 +54,12 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: stretch;
-    margin: 4%;
+    margin: 0% 4% 4% 4%;
 }
 
 .fullBotton {
     background-color: #f1f1f1;
-    margin: 0.5%;
+    margin: 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
