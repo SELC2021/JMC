@@ -86,12 +86,7 @@ function choice(option) {
             }
             // ADD PAYDAY MESSAGE
             let newSal = parseInt(sessionStorage.getItem("salary"), 10);
-            if (newSal == 7000) {
-                addBalance(7000);
-            }
-            if (newSal == 8000) {
-                addBalance(8000);
-            }
+            addBalance(newSal);
             document.getElementById("choice1").textContent = "Get Married";
             document.getElementById("choice2").textContent = "Hold Off for Longer";
             setEverything();
@@ -130,6 +125,47 @@ function choice(option) {
                 addBalance(-3000);
                 addKids(2);
             }
+            document.getElementById("choice1").textContent = "Change to a Random New Job";
+            document.getElementById("choice2").textContent = "Stay At Your Current Job";
+            setEverything();
+            sessionStorage.setItem("choiceNum", "5");
+            break;
+        case 5:
+            if (option == 1) {
+                // ADD RANDOM JOB SELECTION MESSAGE
+                let randomNum = Math.floor(Math.random() * 6);
+                let randomJob;
+                switch (randomNum) {
+                    case 0:
+                        randomJob = "Janitor";
+                        addSalary(-3000);
+                        break;
+                    case 1:
+                        randomJob = "Manager";
+                        addSalary(2000);
+                        break;
+                    case 2:
+                        randomJob = "Teacher";
+                        addSalary(3000);
+                        break;
+                    case 3:
+                        randomJob = "Nanny";
+                        addSalary(1000);
+                        break;
+                    case 4:
+                        randomJob = "Mechanic";
+                        addSalary(-1000);
+                        break;
+                    case 5:
+                        randomJob = "Landscaper";
+                        addSalary(-2000);
+                        break;
+                }
+                setJob(randomJob);
+                setEverything();
+            }
+            if (option == 2) {
+            }
             // ADD GRANDPA PASSING AWAY MESSAGE
             let status = sessionStorage.getItem("relationship")
             if (status == "married") {
@@ -140,12 +176,7 @@ function choice(option) {
             }
             // ADD PAYDAY MESSAGE
             let newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
-            if (newSal2 == 7000) {
-                addBalance(7000);
-            }
-            if (newSal2 == 8000) {
-                addBalance(8000);
-            }
+            addBalance(newSal2);
             // ADD BIRTHDAY FOR KID(S) MESSAGE
             let numKids = parseInt(sessionStorage.getItem("kids"), 10);
             if (numKids == 1) {
@@ -154,21 +185,8 @@ function choice(option) {
             if (numKids == 2) {
                 addBalance(6000);
             }
-            document.getElementById("choice1").textContent = "Change to a Random New Job";
-            document.getElementById("choice2").textContent = "Stay At Your Current Job";
             setEverything();
-            sessionStorage.setItem("choiceNum", "5");
-            break;
-        case 5:
-            if (option == 1) {
-                // ADD RANDOM JOB SELECTION
-            }
-            if (option == 2) {
-            }
-            // CHANGE TEXT FOR RETIRING
-            document.getElementById("choice1").textContent = "REPLACEMENT TEXT o1c5";
-            document.getElementById("choice2").textContent = "REPLACEMENT TEXT o2c5";
-            setEverything();
+            // ADD MESSAGE FOR RETIRING AND END
             break;
         }
 }
