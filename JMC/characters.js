@@ -1,14 +1,9 @@
 function setCharacter(bal, pay, position, name, surname) {
-    let balance = bal;
-    let salary = pay;
-    let job = position;
-    let firstname = name;
-    let lastname = surname;
-    sessionStorage.setItem("balance", balance);
-    sessionStorage.setItem("salary", salary);
-    sessionStorage.setItem("job", job);
-    sessionStorage.setItem("firstname", firstname);
-    sessionStorage.setItem("lastname", lastname);
+    sessionStorage.setItem("balance", bal);
+    sessionStorage.setItem("salary", pay);
+    sessionStorage.setItem("job", position);
+    sessionStorage.setItem("firstname", name);
+    sessionStorage.setItem("lastname", surname);
     sessionStorage.setItem("choiceNum", "1");
     sessionStorage.setItem("car", "null");
     sessionStorage.setItem("relationship", "single");
