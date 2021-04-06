@@ -34,6 +34,9 @@ screen and choose from one of the options given for each choice screen.
 ## Troubleshooting?
 
 ## Credits and acknowledgements
+Contributing authors: Joshua Dutchik, Matthew Graham, and Cole Eichacker
 
+We used codecademy.com to help us learn how to code in CSS, JavaScript
+and HTML. We also used StackEdit to help create our README.md file.
 ## Changelog
 
