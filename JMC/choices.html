@@ -30,9 +30,10 @@
     </div>
     
     <script>
-
-        setEverything();
         
+        setEverything();
+        disButton();
+
     </script>
 </div>
 
@@ -67,7 +68,11 @@
 </div>
 
 <div class="alert" id="alert">
-    <p id="alertText"></p>
+    <div class="alertText" id="alertText"></div>
+    <div class="alertButton" id="alertButton">
+        <button onclick="disButton();">Continue</button>
+    </div>
+
 </div>
 
 </body>

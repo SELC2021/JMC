@@ -108,9 +108,18 @@ body {
 }
 
 .alert {
-    text-align: center;
-    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
     margin: 1% 7% 0% 7%;
+}
+
+.alertText {
+
+}
+
+.alertButton {
+    display: none;
 }
 
 
