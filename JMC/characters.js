@@ -73,9 +73,7 @@ function choice(option) {
     switch(choice) {
         case 1:
             if (option == 1) {  
-                addSalary(1000);
-                let alertText = "Changes";
-                alertButton(alertText);        
+                addSalary(1000);        
             }
             if (option == 2) {
             }
@@ -105,9 +103,9 @@ function choice(option) {
                 addBalance(redPrice);
                 setCar("Red");
             }
-            // ADD PAYDAY MESSAGE
             let newSal = parseInt(sessionStorage.getItem("salary"), 10);
             addBalance(newSal);
+            alertButton("Today is payday! You got paid $" + newSal);  
             document.getElementById("choice1").textContent = "Get Married";
             document.getElementById("choice2").textContent = "Hold Off for Longer";
             setEverything();
@@ -125,19 +123,20 @@ function choice(option) {
             if (option == 1) {
                 addBalance(marriedCost);
                 setRelationship("married");
-                // ADD BUY HOUSING MESSAGE
+                alertButton("Congratulations! You and your spouse bought a house for $" + Math.abs(marriedCost)); 
                 addBalance(-2000);
             }
             if (option == 2) {
-                // ADD BUY HOUSING MESSAGE
+                alertButton("Congratulations! You bought an apartment for $3000"); 
                 addBalance(-3000);
             }
-            // ADD FLAT TIRE MESSAGE
             let carColor = sessionStorage.getItem("car");
             if (carColor == "Blue") {
+                alertButton("You got a flat tire. Pay $750 in repair costs"); 
                 addBalance(-750);
             }
             if (carColor == "Red") {
+                alertButton("You got a flat tire. Pay $500 in repair costs"); 
                 addBalance(-500);
             }
             document.getElementById("choice1").textContent = "Have One Kid";
@@ -169,7 +168,6 @@ function choice(option) {
             break;
         case 5:
             if (option == 1) {
-                // ADD RANDOM JOB SELECTION MESSAGE
                 let randomNum = Math.floor(Math.random() * 6);
                 let randomJob;
                 switch (randomNum) {
@@ -198,6 +196,7 @@ function choice(option) {
                         addSalary(-2000);
                         break;
                 }
+                alertButton("You got a job as a " + randomJob.toLowerCase() + ". Your salary is now $" + sessionStorage.getItem("salary")); 
                 setJob(randomJob);
                 setEverything();
                 document.getElementById("option").disabled = true;
@@ -205,7 +204,6 @@ function choice(option) {
             if (option == 2) {
                 document.getElementById("option").disabled = true;
             }
-            // ADD GRANDPA PASSING AWAY MESSAGE
             let status = sessionStorage.getItem("relationship");
             let funeralCost = -1;
             let inheritance = -1;
@@ -221,32 +219,38 @@ function choice(option) {
             }
             if (status == "married") {
                 addBalance(funeralCost);
+                alertButton("Your grandfather sadly passed away. You must pay $" + Math.abs(funeralCost) + " for the funeral");
             }
             if (status == "single") {
                 addBalance(inheritance);
+                alertButton("Your grandfather sadly passed away. You have inherited $" + inheritance);
             }
-            // ADD PAYDAY MESSAGE
             let newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
             addBalance(newSal2);
-            // ADD BIRTHDAY FOR KID(S) MESSAGE
+            alertButton("Today is payday! You got paid $" + newSal2);  
             let numKids = parseInt(sessionStorage.getItem("kids"), 10);
+            let birthdayMoney = 0;
             if (numKids == 1) {
                 if (person == "Sarah") {
                     addBalance(3000);
+                    birthdayMoney += 3000;
                 } else {
                     addBalance(2000);
+                    birthdayMoney += 2000;
                 }
-                addBalance(3000);
+                alertButton("It’s your child’s birthday! You earned $" + birthdayMoney + " in birthday money");  
             }
             if (numKids == 2) {
                 if (person == "Sarah") {
                     addBalance(6000);
+                    birthdayMoney += 6000;
                 } else {
                     addBalance(4000);
+                    birthdayMoney += 4000;
                 }
+                alertButton("It’s your children’s birthday! You earned $" + birthdayMoney + " in birthday money");  
             }
             setEverything();
-            // ADD MESSAGE FOR RETIRING AND END
             break;
         }
 }
