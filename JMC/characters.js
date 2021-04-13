@@ -59,10 +59,12 @@ function setEverything() {
 function alertButton(text) {
     document.getElementById("alertText").textContent = text;
     document.getElementById("alert").style.backgroundColor = "ivory";
+    document.getElementById("alertButton").style.display = "inline";
 }
 
 function disButton() {
     document.getElementById("alert").style.display = "none";
+    document.getElementById("alertButton").style.display = "none";
 }
 
 function choice(option) {
