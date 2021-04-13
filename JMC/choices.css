@@ -22,31 +22,35 @@ body {
 }
 
 .player {
-    border-style: dotted;
-    border-color: red;
+    background-color: ivory;
     padding: 0% 0.5% 0.5% 0.5%;
     text-align: center;
+    width: 25%;
+    margin: 0.5%;
 }
 
 .balance {
-    border-style: dotted;
-    border-color: orange;
+    background-color: ivory;
     padding: 0% 0.5% 0.5% 0.5%;
     text-align: center;
+    width: 25%;
+    margin: 0.5%;
 }
 
 .position {
-    border-style: dotted;
-    border-color: blue;
+    background-color: ivory;
     padding: 0% 0.5% 0.5% 0.5%;
     text-align: center;
+    width: 25%;
+    margin: 0.5%;
 }
 
 .salary {
-    border-style: dotted;
-    border-color: purple;
+    background-color: ivory;
     padding: 0% 0.5% 0.5% 0.5%;
     text-align: center;
+    width: 25%;
+    margin: 0.5%;
 }
 
 .selection {
