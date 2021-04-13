@@ -7,7 +7,7 @@ function setCharacter(bal, pay, position, name, surname) {
     sessionStorage.setItem("choiceNum", "1");
     sessionStorage.setItem("car", "null");
     sessionStorage.setItem("relationship", "single");
-    sessionStorage.setItem("kids", "0")
+    sessionStorage.setItem("kids", "0");
 }
 
 function addBalance(amount) {
@@ -58,25 +58,42 @@ function setEverything() {
 
 function choice(option) {
     let choice = parseInt(sessionStorage.getItem("choiceNum"), 10);
+    let person = sessionStorage.getItem("firstname");
     switch(choice) {
         case 1:
             if (option == 1) {
-                addSalary(1000);                
+                if (person == "Nathan"){
+                    addSalary(3000);
+                } else {
+                    addSalary(1000);
+                }             
             }
             if (option == 2) {
             }
-            document.getElementById("choice1").textContent = "Buy a Blue Car for $2,000";
-            document.getElementById("choice2").textContent = "Buy a Red Car for $2,500";
+            document.getElementById("choice1").textContent = "Buy a Blue Car";
+            document.getElementById("choice2").textContent = "Buy a Red Car";
             setEverything();
             sessionStorage.setItem("choiceNum", "2");
             break;
         case 2:
+            let bluePrice = -1;
+            let redPrice = -1;
+            if (person == "Sarah") {
+                bluePrice = -2000;
+                redPrice = -2500;
+            } else if (person == "Kyle") {
+                bluePrice = -1000;
+                redPrice = -1500;
+            } else {
+                bluePrice = -1500;
+                redPrice = -2000;
+            }
             if (option == 1) { 
-                addBalance(-2000);
+                addBalance(bluePrice);
                 setCar("Blue");     
             }
             if (option == 2) {
-                addBalance(-2500);
+                addBalance(redPrice);
                 setCar("Red");
             }
             // ADD PAYDAY MESSAGE
@@ -88,8 +105,16 @@ function choice(option) {
             sessionStorage.setItem("choiceNum", "3");
             break;
         case 3:
+            let marriedCost = -1;
+            if (person == "Sarah") {
+                marriedCost = -3000;
+            } else if (person == "Kyle") {
+                marriedCost = -2000;
+            } else {
+                marriedCost = -1000;
+            }
             if (option == 1) {
-                addBalance(-3000);
+                addBalance(marriedCost);
                 setRelationship("married");
                 // ADD BUY HOUSING MESSAGE
                 addBalance(-2000);
@@ -99,7 +124,7 @@ function choice(option) {
                 addBalance(-3000);
             }
             // ADD FLAT TIRE MESSAGE
-            let carColor = sessionStorage.getItem("car")
+            let carColor = sessionStorage.getItem("car");
             if (carColor == "Blue") {
                 addBalance(-750);
             }
@@ -113,11 +138,19 @@ function choice(option) {
             break;
         case 4:
             if (option == 1) {
-                addBalance(-2000);
+                if (person == "Sarah") {
+                    addBalance(-2000);
+                } else {
+                    addBalance(-1000);
+                }
                 addKids(1);
             }
             if (option == 2) {
-                addBalance(-3000);
+                if (person == "Sarah") {
+                    addBalance(-3000);
+                } else {
+                    addBalance(-2000);
+                }
                 addKids(2);
             }
             document.getElementById("choice1").textContent = "Change to a Random New Job";
@@ -162,12 +195,24 @@ function choice(option) {
             if (option == 2) {
             }
             // ADD GRANDPA PASSING AWAY MESSAGE
-            let status = sessionStorage.getItem("relationship")
+            let status = sessionStorage.getItem("relationship");
+            let funeralCost = -1;
+            let inheritance = -1;
+            if (person == "Sarah") {
+                funeralCost = -3000;
+                inheritance = 2000;
+            } else if (person == "Kyle") {
+                funeralCost = -2000;
+                inheritance = 1000;
+            } else {
+                funeralCost = -2000;
+                inheritance = 3000;
+            }
             if (status == "married") {
-                addBalance(-3000);
+                addBalance(funeralCost);
             }
             if (status == "single") {
-                addBalance(2000);
+                addBalance(inheritance);
             }
             // ADD PAYDAY MESSAGE
             let newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
@@ -175,10 +220,19 @@ function choice(option) {
             // ADD BIRTHDAY FOR KID(S) MESSAGE
             let numKids = parseInt(sessionStorage.getItem("kids"), 10);
             if (numKids == 1) {
+                if (person == "Sarah") {
+                    addBalance(3000);
+                } else {
+                    addBalance(2000);
+                }
                 addBalance(3000);
             }
             if (numKids == 2) {
-                addBalance(6000);
+                if (person == "Sarah") {
+                    addBalance(6000);
+                } else {
+                    addBalance(4000);
+                }
             }
             setEverything();
             // ADD MESSAGE FOR RETIRING AND END
