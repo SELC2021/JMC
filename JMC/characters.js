@@ -238,7 +238,7 @@ function choice(option) {
                     addBalance(2000);
                     birthdayMoney += 2000;
                 }
-                alertButton("It’s your child’s birthday! You earned $" + birthdayMoney + " in birthday money");  
+                alertButton("It's your child's birthday! You earned $" + birthdayMoney + " in birthday money");  
             }
             if (numKids == 2) {
                 if (person == "Sarah") {
@@ -248,7 +248,7 @@ function choice(option) {
                     addBalance(4000);
                     birthdayMoney += 4000;
                 }
-                alertButton("It’s your children’s birthday! You earned $" + birthdayMoney + " in birthday money");  
+                alertButton("It's your children's birthday! You earned $" + birthdayMoney + " in birthday money");  
             }
             setEverything();
             break;
