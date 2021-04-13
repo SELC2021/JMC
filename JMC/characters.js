@@ -191,8 +191,10 @@ function choice(option) {
                 }
                 setJob(randomJob);
                 setEverything();
+                document.getElementById("option").disabled = true;
             }
             if (option == 2) {
+                document.getElementById("option").disabled = true;
             }
             // ADD GRANDPA PASSING AWAY MESSAGE
             let status = sessionStorage.getItem("relationship");
