@@ -56,12 +56,19 @@ function setEverything() {
         surname.innerHTML = lastname;
 }
 
+function alertButton(text) {
+    document.getElementById("alertText").textContent = text;
+    document.getElementById("alert").style.display = "none";
+}
+
 function choice(option) {
     let choice = parseInt(sessionStorage.getItem("choiceNum"), 10);
     switch(choice) {
         case 1:
-            if (option == 1) {
-                addSalary(1000);                
+            if (option == 1) {  
+                addSalary(1000);
+                let alertText = "Changes";
+                alertButton(alertText);        
             }
             if (option == 2) {
             }
