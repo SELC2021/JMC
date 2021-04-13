@@ -58,6 +58,10 @@ function setEverything() {
 
 function alertButton(text) {
     document.getElementById("alertText").textContent = text;
+    document.getElementById("alert").style.backgroundColor = "ivory";
+}
+
+function disButton() {
     document.getElementById("alert").style.display = "none";
 }
 
