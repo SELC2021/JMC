@@ -34,6 +34,7 @@ choices.css
 choices.html
 ending.css
 ending.html
+ending.jpg
 home.html
 job.jpg
 job2.jpg

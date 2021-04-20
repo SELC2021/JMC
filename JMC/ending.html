@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="ending.css">
+<script type="text/javascript" src="characters.js"></script>
 <head>
     <title>Ending Screen</title>
 </head>
 <body>
 
 <div class="header">
-    <h1>You Have Completer Your Game of Life!</h1>
+    <h1>You Have Completed Your Game of Life!</h1>
 </div>
 
 <div class="summary">
     <div class="writtensummary">
-        <p>Summary</p>
+        <p id="summary">Summary</p>
     </div>
 
     <div class="img">
@@ -20,8 +21,14 @@
     </div>
 
     <div class="stats">
-        <p>stats</p>
+        <p id="stats">stats</p>
     </div>
+
+    <script>
+        document.getElementById("summary").textContent = "Congratulations, you made it to retirement and you have had many accomplishments along the way...";
+        document.getElementById("stats").textContent = "You were able to make $" + sessionStorage.getItem("balance") + " with an ending salary of $" + sessionStorage.getItem("salary") + " as a " + sessionStorage.getItem("job") + ". You have " + sessionStorage.getItem("kids") + " kid(s) and a " + sessionStorage.getItem("car") + " car.";
+    </script>
+
 </div>
 
 </body>
