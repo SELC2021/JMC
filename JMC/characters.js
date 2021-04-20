@@ -215,10 +215,12 @@ function choice(option) {
                 alertButton("You got a job as a " + randomJob.toLowerCase() + ". Your salary is now $" + sessionStorage.getItem("salary")); 
                 setJob(randomJob);
                 setEverything();
-                document.getElementById("option").disabled = true;
+                document.getElementById("option1").disabled = true;
+                document.getElementById("option2").disabled = true;
             }
             if (option == 2) {
-                document.getElementById("option").disabled = true;
+                document.getElementById("option1").disabled = true;
+                document.getElementById("option2").disabled = true;
             }
             let status = sessionStorage.getItem("relationship");
             let funeralCost = -1;

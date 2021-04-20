@@ -23,20 +23,44 @@ Right click on the *home.html* file and choose "Open In Default Browser" to
 reach the home page of the program. From there on, follow the instructions on
 screen and choose from one of the options given for each choice screen.
 
-## List of Files Included?
+## List of Files Included
+bluecar.jpg
+characters.js
+characterselect.css
+characterselect.html
+child.jpg
+children.jpg
+choices.css
+choices.html
+ending.css
+ending.html
+home.html
+job.jpg
+job2.jpg
+kyle.jpg
+logo.png
+marriage.jpg
+nathan.jpg
+newjob.jpg
+no.jpg
+README.md
+redcar.jpg
+sarah.jpg
+school.jpg
+style.css
 
-## Copyright and Licensing Information?
+## Copyright and Licensing Information
 
-## Contact Info for the Distributor or programmer?
+## Contact Info for the Distributor or programmer
 
-## Known Bugs?
+## Known Bugs
 
-## Troubleshooting?
+## Troubleshooting
 
 ## Credits and acknowledgements
 Contributing authors: Joshua Dutchik, Matthew Graham, and Cole Eichacker
 
 We used codecademy.com to help us learn how to code in CSS, JavaScript
 and HTML. We also used StackEdit to help create our README.md file.
-## Changelog
 
+## Changelog
