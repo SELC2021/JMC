@@ -24,30 +24,30 @@ reach the home page of the program. From there on, follow the instructions on
 screen and choose from one of the options given for each choice screen.
 
 ## List of Files Included
-bluecar.jpg
-characters.js
-characterselect.css
-characterselect.html
-child.jpg
-children.jpg
-choices.css
-choices.html
-ending.css
-ending.html
-ending.jpg
-home.html
-job.jpg
-job2.jpg
-kyle.jpg
-logo.png
-marriage.jpg
-nathan.jpg
-newjob.jpg
-no.jpg
-README.md
-redcar.jpg
-sarah.jpg
-school.jpg
+bluecar.jpg, 
+characters.js, 
+characterselect.css, 
+characterselect.html, 
+child.jpg, 
+children.jpg, 
+choices.css, 
+choices.html, 
+ending.css, 
+ending.html, 
+ending.jpg, 
+home.html, 
+job.jpg, 
+job2.jpg, 
+kyle.jpg, 
+logo.png, 
+marriage.jpg, 
+nathan.jpg, 
+newjob.jpg, 
+no.jpg, 
+README.md, 
+redcar.jpg, 
+sarah.jpg, 
+school.jpg, 
 style.css
 
 ## Copyright and Licensing Information
