@@ -121,5 +121,9 @@ body {
 .retire {
     display: none;
     cursor: pointer;
+    width: 20%;
+    font-size: 20px;
+    margin-left: 40%;
+    padding: 1%;
 }
 
