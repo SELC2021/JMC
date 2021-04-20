@@ -70,6 +70,13 @@ function disButton() {
 function choice(option) {
     let choice = parseInt(sessionStorage.getItem("choiceNum"), 10);
     let person = sessionStorage.getItem("firstname");
+    let birthdayMoney = 0;
+    let grandpaText1 = "";
+    let grandpaText2 = "";
+    let grandpaAmount;
+    let randomJob;
+    let newSal2;
+
     switch(choice) {
         case 1:
             if (option == 1) {  
@@ -185,7 +192,6 @@ function choice(option) {
         case 5:
             if (option == 1) {
                 let randomNum = Math.floor(Math.random() * 6);
-                let randomJob;
                 switch (randomNum) {
                     case 0:
                         randomJob = "Janitor";
@@ -212,7 +218,6 @@ function choice(option) {
                         addSalary(-2000);
                         break;
                 }
-                alertButton("You got a job as a " + randomJob.toLowerCase() + ". Your salary is now $" + sessionStorage.getItem("salary")); 
                 setJob(randomJob);
                 setEverything();
                 document.getElementById("option1").disabled = true;
@@ -237,15 +242,18 @@ function choice(option) {
             }
             if (status == "married") {
                 addBalance(funeralCost);
-                alertButton("Your grandfather sadly passed away. You must pay $" + Math.abs(funeralCost) + " for the funeral");
+                grandpaText1 = "You must pay $";
+                grandpaText2 = " for the funeral";
+                grandpaAmount = Math.abs(funeralCost);
             }
             if (status == "single") {
                 addBalance(inheritance);
-                alertButton("Your grandfather sadly passed away. You have inherited $" + inheritance);
+                grandpaText1 = "You gain $";
+                grandpaText2 = " in inhertiance";
+                grandpaAmount = inheritance;
             }
-            let newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
+            newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
             addBalance(newSal2);
-            alertButton("Today is payday! You got paid $" + newSal2);  
             let numKids = parseInt(sessionStorage.getItem("kids"), 10);
             let birthdayMoney = 0;
             if (numKids == 1) {
@@ -256,7 +264,6 @@ function choice(option) {
                     addBalance(2000);
                     birthdayMoney += 2000;
                 }
-                alertButton("It's your child's birthday! You earned $" + birthdayMoney + " in birthday money");  
             }
             if (numKids == 2) {
                 if (person == "Sarah") {
@@ -266,9 +273,9 @@ function choice(option) {
                     addBalance(4000);
                     birthdayMoney += 4000;
                 }
-                alertButton("It's your children's birthday! You earned $" + birthdayMoney + " in birthday money");  
             }
             document.getElementById("retire").style.display = "inline";
+            alertButton("You got a job as a " + randomJob.toLowerCase() + ". Your salary is now $" + sessionStorage.getItem("salary") + "\nYour grandfather sadly passed away. " + grandpaText1 + grandpaAmount + grandpaText2 + "\nToday is payday! You got paid $" + newSal2 + "\nIt's your child's birthday! You earned $" + birthdayMoney + " in birthday money");
             setEverything();
             break;
         }
