@@ -79,6 +79,10 @@ function choice(option) {
             }
             document.getElementById("choice1").textContent = "Buy a Blue Car";
             document.getElementById("choice2").textContent = "Buy a Red Car";
+
+            document.getElementById("img1").src = "bluecar.jpg";
+            document.getElementById("img2").src = "redcar.jpg";
+
             setEverything();
             sessionStorage.setItem("choiceNum", "2");
             break;
@@ -108,6 +112,10 @@ function choice(option) {
             alertButton("Today is payday! You got paid $" + newSal);  
             document.getElementById("choice1").textContent = "Get Married";
             document.getElementById("choice2").textContent = "Hold Off for Longer";
+
+            document.getElementById("img1").src = "marriage.jpg";
+            document.getElementById("img2").src = "no.jpg";
+
             setEverything();
             sessionStorage.setItem("choiceNum", "3");
             break;
@@ -141,6 +149,10 @@ function choice(option) {
             }
             document.getElementById("choice1").textContent = "Have One Kid";
             document.getElementById("choice2").textContent = "Have Two Kids";
+
+            document.getElementById("img1").src = "child.jpg";
+            document.getElementById("img2").src = "children.jpg";
+
             setEverything();
             sessionStorage.setItem("choiceNum", "4");
             break;
@@ -163,6 +175,10 @@ function choice(option) {
             }
             document.getElementById("choice1").textContent = "Change to a Random New Job";
             document.getElementById("choice2").textContent = "Stay At Your Current Job";
+
+            document.getElementById("img1").src = "newjob.jpg";
+            document.getElementById("img2").src = "job2.jpg";
+
             setEverything();
             sessionStorage.setItem("choiceNum", "5");
             break;
