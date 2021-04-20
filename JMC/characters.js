@@ -268,6 +268,7 @@ function choice(option) {
                 }
                 alertButton("It's your children's birthday! You earned $" + birthdayMoney + " in birthday money");  
             }
+            document.getElementById("retire").style.display = "inline";
             setEverything();
             break;
         }

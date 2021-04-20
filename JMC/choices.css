@@ -118,3 +118,8 @@ body {
     display: none;
 }
 
+.retire {
+    display: none;
+    cursor: pointer;
+}
+
