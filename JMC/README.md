@@ -50,14 +50,6 @@ sarah.jpg,
 school.jpg, 
 style.css
 
-## Copyright and Licensing Information
-
-## Contact Info for the Distributor or programmer
-
-## Known Bugs
-
-## Troubleshooting
-
 ## Credits and acknowledgements
 Contributing authors: Joshua Dutchik, Matthew Graham, and Cole Eichacker
 
