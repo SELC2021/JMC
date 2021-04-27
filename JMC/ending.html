@@ -26,7 +26,11 @@
 
     <script>
         document.getElementById("summary").textContent = "Congratulations, you made it to retirement and you have had many accomplishments along the way...";
-        document.getElementById("stats").textContent = "You were able to make $" + sessionStorage.getItem("balance") + " with an ending salary of $" + sessionStorage.getItem("salary") + " as a " + sessionStorage.getItem("job") + ". You have " + sessionStorage.getItem("kids") + " kid(s) and a " + sessionStorage.getItem("car") + " car.";
+        if (sessionStorage.getItem("kids") == "1") {
+            document.getElementById("stats").textContent = "You were able to make $" + sessionStorage.getItem("balance") + " with an ending salary of $" + sessionStorage.getItem("salary") + " as a " + sessionStorage.getItem("job").toLowerCase() + ". You have " + sessionStorage.getItem("kids") + " kid and a " + sessionStorage.getItem("car").toLowerCase() + " car.";
+        } else {
+            document.getElementById("stats").textContent = "You were able to make $" + sessionStorage.getItem("balance") + " with an ending salary of $" + sessionStorage.getItem("salary") + " as a " + sessionStorage.getItem("job").toLowerCase() + ". You have " + sessionStorage.getItem("kids") + " kids and a " + sessionStorage.getItem("car").toLowerCase() + " car.";
+        }
     </script>
 
 </div>

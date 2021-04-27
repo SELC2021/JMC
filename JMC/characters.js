@@ -243,13 +243,13 @@ function choice(option) {
             if (status == "married") {
                 addBalance(funeralCost);
                 grandpaText1 = "You must pay $";
-                grandpaText2 = " for the funeral";
+                grandpaText2 = " for the funeral.";
                 grandpaAmount = Math.abs(funeralCost);
             }
             if (status == "single") {
                 addBalance(inheritance);
                 grandpaText1 = "You gain $";
-                grandpaText2 = " in inhertiance";
+                grandpaText2 = " in inhertiance.";
                 grandpaAmount = inheritance;
             }
             newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
@@ -275,7 +275,7 @@ function choice(option) {
                 }
             }
             document.getElementById("retire").style.display = "inline";
-            alertButton("You got a job as a " + randomJob.toLowerCase() + ". Your salary is now $" + sessionStorage.getItem("salary") + "\nYour grandfather sadly passed away. " + grandpaText1 + grandpaAmount + grandpaText2 + "\nToday is payday! You got paid $" + newSal2 + "\nIt's your child's birthday! You earned $" + birthdayMoney + " in birthday money");
+            alertButton("You got a job as a " + randomJob.toLowerCase() + ". Your salary is now $" + sessionStorage.getItem("salary") + ". \nYour grandfather sadly passed away. " + grandpaText1 + grandpaAmount + grandpaText2 + "\nToday is payday! You got paid $" + newSal2 + ". \nIt's your child's birthday! You earned $" + birthdayMoney + " in birthday money");
             setEverything();
             break;
         }
