@@ -59,7 +59,7 @@ function setEverything() {
 function alertButton(text) {
     document.getElementById("alertText").textContent = text;
     document.getElementById("alert").style.backgroundColor = "ivory";
-    document.getElementById("alertButton").style.display = "inline";
+    document.getElementById("alertButton").style.display = "none";
 }
 
 function disButton() {
@@ -255,7 +255,6 @@ function choice(option) {
             newSal2 = parseInt(sessionStorage.getItem("salary"), 10);
             addBalance(newSal2);
             let numKids = parseInt(sessionStorage.getItem("kids"), 10);
-            let birthdayMoney = 0;
             if (numKids == 1) {
                 if (person == "Sarah") {
                     addBalance(3000);
